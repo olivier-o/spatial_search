@@ -99,6 +99,9 @@ GEM
     polyglot (0.3.3)
     quiet_assets (1.0.1)
       railties (~> 3.1)
+    rabl (0.7.9)
+      activesupport (>= 2.3.14)
+      multi_json (~> 1.0)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -183,6 +186,7 @@ DEPENDENCIES
   figaro (>= 0.5.0)
   jquery-rails
   quiet_assets (>= 1.0.1)
+  rabl
   rails (= 3.2.9)
   rspec-rails (>= 2.11.4)
   sass-rails (~> 3.2.3)

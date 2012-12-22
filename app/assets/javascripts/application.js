@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
-//= require_tree .
+//= require_tree ./bootstrap/
+//= require dataTables/jquery.dataTables
+//= require dataTables/dt-bootstrap.js

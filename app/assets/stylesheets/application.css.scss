@@ -9,8 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap/bootstrap.min.css
+ *= require bootstrap/bootstrap-responsive.min.css
+ *= require dataTables/dt-bootstrap.css
  *= require_tree .
-*/
+ */
 
 .content {
   background-color: #eee;

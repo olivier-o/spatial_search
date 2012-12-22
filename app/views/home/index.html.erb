@@ -1,2 +1,48 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Spatial Search</h1>
+<p><button id="search" type="button" class="btn btn-large btn-primary" data-loading-text="Loading...">Search Listings</button></p>
+
+<div id="result" style="display:none">
+  <table id="listings" class="table table-bordered table-striped dataTable">
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Score</th>
+              <th>Name</th>
+              <th>Distance</th>
+              <th>Price</th>
+          </tr>
+      </thead>
+      <tbody>
+      </tbody>
+  </table>
+</div>
+<div id="demo"></div>
+<script language="javascript">
+$(function() {
+  $('#search').on('click', function(){
+    $(this).button('loading');
+    var self = this;
+    var jqxhr = $.post("listings/search", function() {
+    })
+    .success(function(data) {
+      $('#listings').dataTable( {
+        "bSort": false,
+        "bProcessing": true,
+        "bRetrieve": true,
+        "sAjaxDataProp": "",
+        "aoColumns": [    
+          { "mDataProp": "id" },  
+          { "mDataProp": "score" },  
+          { "mDataProp": "name" },
+          { "mDataProp": "distance" }, 
+          { "mDataProp": "price" }
+        ],   
+        "aaData": data
+      } );
+      $('#result').fadeIn();
+    })
+    .error(function() { alert("error"); })
+    .complete(function() { $(self).button('reset'); });
+  });
+});
+</script>

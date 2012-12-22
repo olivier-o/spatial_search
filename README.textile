@@ -23,6 +23,7 @@ h2. Install
 * Run `rails s` 
 
 h2. Shortcuts
+
 Filter is hardcoded in config/filter.json
 A distance parameter has been added to the filter
 Location has been ignored and distance has been used instead to simulate the radius limit of the search
@@ -30,6 +31,7 @@ In the seeds data, Listing has a distance field (randomly populated) that is con
 Price creterion is just ASC sorted and doesn't implement variance.
 
 h2. Credits
+
 All the open source developers for the Rails framework and numerous gems used...Thank you.
 
 Olivier Oudry for Alpha2Real
